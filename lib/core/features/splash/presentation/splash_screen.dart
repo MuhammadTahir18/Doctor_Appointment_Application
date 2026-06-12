@@ -104,15 +104,6 @@ class _SplashScreenState extends State<SplashScreen>
                         letterSpacing: 1.2,
                       ),
                     ),
-                    const Text(
-                      'DoctorApp',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
-                    ),
                     const SizedBox(height: 8),
                     const Text(
                       'Your Health, Our Priority',
