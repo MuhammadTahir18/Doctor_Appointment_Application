@@ -7,7 +7,7 @@ A full-featured **Doctor Appointment Booking** Flutter application built for Pak
 ## 📱 Screenshots
 
 > Add your app screenshots here after running on Android
-dsplash.PNG
+> https://github.com/MuhammadTahir18/Doctor_Appointment_Application/blob/357183776f23198b3cec812ce2cf6753436c8ce6/chatscreen.PNG
 ---
 
 ## ✨ Features
