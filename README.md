@@ -164,8 +164,8 @@ intl: ^0.19.0
 - 🎓 BS Information Technology
 - 💼 Flutter Developer
 - 📍 Lahore, Pakistan
-- 🔗 https://github.com/MuhammadTahir18
-- 📧 tahir0309106@gmail.com
+- 🔗 [GitHub](https://github.com/YOUR_USERNAME)
+- 📧 your.email@gmail.com
 
 ---
 
