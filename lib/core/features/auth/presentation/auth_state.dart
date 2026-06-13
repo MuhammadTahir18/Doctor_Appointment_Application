@@ -9,7 +9,12 @@ class AuthLoading extends AuthState {}
 class AuthSuccess extends AuthState {
   final String uid;
   final String email;
-  AuthSuccess({required this.uid, required this.email});
+  final String role;
+  AuthSuccess({
+    required this.uid,
+    required this.email,
+    this.role = 'patient',
+  });
 }
 
 class AuthError extends AuthState {

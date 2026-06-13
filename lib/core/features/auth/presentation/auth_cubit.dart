@@ -55,7 +55,19 @@ class AuthCubit extends Cubit<AuthState> {
         email: email,
         password: password,
       );
-      emit(AuthSuccess(uid: result.user!.uid, email: result.user!.email!));
+
+      // Firestore se role lao
+      final doc = await _firestore
+          .collection('users')
+          .doc(result.user!.uid)
+          .get();
+      final role = doc.data()?['role'] ?? 'patient';
+
+      emit(AuthSuccess(
+        uid: result.user!.uid,
+        email: result.user!.email!,
+        role: role,
+      ));
     } on FirebaseAuthException catch (e) {
       emit(AuthError(_getError(e.code)));
     }

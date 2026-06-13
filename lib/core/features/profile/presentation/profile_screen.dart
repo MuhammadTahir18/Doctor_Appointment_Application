@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../admin/presentation/admin_screen.dart';
 import '../../auth/presentation/auth_cubit.dart';
 import '../../auth/presentation/login_screen.dart';
 
@@ -411,6 +412,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _SettingsTile(
                     icon: Icons.info_outline,
                     label: 'About App',
+
                     onTap: () {
                       showAboutDialog(
                         context: context,
@@ -421,7 +423,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       );
                     },
                   ),
-
+                  if (_userData?['role'] == 'admin')
+                    _SettingsTile(
+                      icon: Icons.admin_panel_settings_outlined,
+                      label: 'Admin Panel',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) =>  AdminScreen(),
+                          ),
+                        );
+                      },
+                    ),
                   const SizedBox(height: 24),
 
                   // Logout
